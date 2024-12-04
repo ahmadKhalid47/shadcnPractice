@@ -43,9 +43,14 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar collapsible={"icon"} side={"left"} variant={"floating"}>
-      <SidebarContent className="bg-primary text-primary-foreground rounded-lg">
-        <SidebarGroup className="">
+    <Sidebar
+      collapsible={"icon"}
+      side={"left"}
+      variant={"floating"}
+      
+    >
+      <SidebarContent className="bg-primary text-primary-foreground rounded-lg border-none">
+        <SidebarGroup>
           <SidebarGroupLabel className="text-primary-foreground">
             Ahmad Raza
           </SidebarGroupLabel>

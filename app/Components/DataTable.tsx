@@ -211,13 +211,16 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "email",
     header: ({ column }) => {
       return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
+        <>
           Email
-          <ArrowUpDown />
-        </Button>
+          <Button variant="ghost">
+            <ArrowUpDown
+              onClick={() =>
+                column.toggleSorting(column.getIsSorted() === "asc")
+              }
+            />
+          </Button>
+        </>
       );
     },
     cell: ({ row }) => <div className="lowercase">{row.getValue("email")}</div>,
