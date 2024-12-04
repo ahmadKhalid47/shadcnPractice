@@ -11,7 +11,7 @@ export function AccordionDemo() {
     <Accordion
       type="single"
       collapsible
-      className="w-96 border-2 px-1 rounded-lg"
+      className="w-full border-2 px-1 rounded-lg"
     >
       <AccordionItem value="item-1">
         <AccordionTrigger className="px-3 my-1"  >Is it accessible?</AccordionTrigger>
