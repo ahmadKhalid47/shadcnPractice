@@ -39,7 +39,7 @@ const chartConfig = {
 
 export function ChartDemo() {
   return (
-    <Card>
+    <Card className="w-full">
       <CardHeader>
         <CardTitle>Area Chart - Gradient</CardTitle>
         <CardDescription>
