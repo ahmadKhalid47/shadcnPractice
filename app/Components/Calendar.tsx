@@ -17,9 +17,7 @@ import {
 export function DatePickerDemo() {
   return (
     <div className="flex justify-start gap-2 w-full">
-      {/* single */}
       <SingleDatePicker />
-      {/* multiple */}
       <MultipleDatePicker />
     </div>
   );
