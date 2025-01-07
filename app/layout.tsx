@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "./Components/app-sidebar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,6 +34,7 @@ export default function RootLayout({
         <SidebarProvider className="p-2">
           <AppSidebar />
           <main className="w-full">
+            <SpeedInsights />
             <SidebarTrigger className="fixed top-2 z-10" />
             <div className="pt-10">{children}</div>
           </main>
