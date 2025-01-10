@@ -52,7 +52,7 @@ export function AppSidebar() {
       collapsible={"icon"}
       side={"left"}
       variant={"floating"}
-      className="pe-0"
+      // className="pe-0"
     >
       <SidebarContent className="bg-primary text-primary-foreground rounded-lg border-none">
         <SidebarGroup>
