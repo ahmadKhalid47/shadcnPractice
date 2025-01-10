@@ -40,7 +40,7 @@ export default function RootLayout({
             <AppSidebar />
             <main className="w-full min-h-[100vh] py-2 px-3">
               <Navbar />
-              <div className="pt-2.5">{children}</div>
+              <div className="pt-14">{children}</div>
             </main>
           </SidebarProvider>
         </body>
