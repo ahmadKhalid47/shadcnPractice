@@ -48,7 +48,12 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar collapsible={"icon"} side={"left"} variant={"floating"}>
+    <Sidebar
+      collapsible={"icon"}
+      side={"left"}
+      variant={"floating"}
+      className="pe-0"
+    >
       <SidebarContent className="bg-primary text-primary-foreground rounded-lg border-none">
         <SidebarGroup>
           <SidebarGroupLabel className="text-primary-foreground text-lg mt-2 mb-2">

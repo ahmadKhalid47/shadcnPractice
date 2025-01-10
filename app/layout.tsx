@@ -38,12 +38,9 @@ export default function RootLayout({
         >
           <SidebarProvider className="relative">
             <AppSidebar />
-            <main className="w-full min-h-[100vh] py-2 pe-3">
+            <main className="w-full min-h-[100vh] py-2 px-3">
               <Navbar />
-              <div className="pt-3">
-
-              </div>
-                {children}
+              <div className="pt-2.5">{children}</div>
             </main>
           </SidebarProvider>
         </body>
