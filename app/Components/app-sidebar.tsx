@@ -52,7 +52,7 @@ export function AppSidebar() {
       <SidebarContent className="bg-primary text-primary-foreground rounded-lg border-none">
         <SidebarGroup>
           <SidebarGroupLabel className="text-primary-foreground text-lg mt-2 mb-2">
-            Ahmad Raza
+            Portfolio
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>

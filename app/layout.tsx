@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "./Components/app-sidebar";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import React from "react";
+import StoreProvider from "./store/StoreProvider";
+import { Navbar } from "./Components/NavBar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,19 +30,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full bg-gray-300 text-foreground`}
-      >
-        <SidebarProvider className="p-2">
-          <AppSidebar />
-          <main className="w-full">
-            <SpeedInsights />
-            <SidebarTrigger className="fixed top-2 z-10" />
-            <div className="pt-10">{children}</div>
-          </main>
-        </SidebarProvider>{" "}
-      </body>
-    </html>
+    <StoreProvider>
+      <SpeedInsights />
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased w-full bg-gray-300 text-foreground`}
+        >
+          <SidebarProvider className="relative">
+            <AppSidebar />
+            <main className="w-full min-h-[100vh] py-2 pe-3">
+              <Navbar />
+              <div className="pt-3">
+
+              </div>
+                {children}
+            </main>
+          </SidebarProvider>
+        </body>
+      </html>
+    </StoreProvider>
   );
 }
