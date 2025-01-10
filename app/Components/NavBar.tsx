@@ -21,7 +21,7 @@ export function Navbar() {
           <Linkedin />
         </a>
         <a
-          href="https://www.linkedin.com/in/ahmadraza47/"
+          href="https://github.com/ahmadKhalid47/"
           target="_blank"
           className="hover:text-white"
         >
