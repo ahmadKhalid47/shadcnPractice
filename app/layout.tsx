@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "./Components/app-sidebar";
@@ -7,16 +6,12 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import React from "react";
 import StoreProvider from "./store/StoreProvider";
 import { Navbar } from "./Components/NavBar";
+import { Roboto } from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "400", "700", "900"], // Ensure these are valid weights
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -34,7 +29,7 @@ export default function RootLayout({
       <SpeedInsights />
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased w-full bg-gray-300 text-foreground`}
+          className={`${roboto.className}  antialiased w-full bg-gray-300 text-foreground`}
         >
           <SidebarProvider className="relative">
             <AppSidebar />
