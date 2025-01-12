@@ -4,7 +4,7 @@ import profilePic from "../public/IMG-20241208-WA0041.jpg";
 export default function Home() {
   return (
     <div className="w-full">
-      <h1 className="w-fit mx-auto text-4xl text-gray-400 mt-3 lg:mt-10 tracking-widest">
+      <h1 className="w-fit mx-auto text-4xl text-gray-400 mt-3 lg:mt-10 tracking-widest uppercase">
         ABOUT
       </h1>
       <div className="w-full flex lg:flex-row flex-col justify-center lg:justify-start items-center mt-12 lg:mt-24 gap-5">
@@ -19,7 +19,7 @@ export default function Home() {
         </Avatar>
         <div>
           <h2 className="text-2xl xs:text-3xl font-bold  text-center lg:text-start">
-            Here is a little background
+            Ahmad Raza
           </h2>
           <p
             className="text-md xs:text-lg text-center lg:text-justify xl:text-start pt-2 w-full xl:w-[600px] pe-2"
