@@ -1,4 +1,12 @@
-import { User, Folder, BriefcaseBusiness, Contact,GraduationCap,SquareCode } from "lucide-react";
+"use client";
+import {
+  User,
+  Folder,
+  BriefcaseBusiness,
+  Contact,
+  GraduationCap,
+  SquareCode,
+} from "lucide-react";
 
 import {
   Sidebar,
@@ -11,6 +19,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 // Menu items.
 const items = [
@@ -47,12 +56,9 @@ const items = [
 ];
 
 export function AppSidebar() {
+  const pathName = usePathname();
   return (
-    <Sidebar
-      collapsible={"icon"}
-      side={"left"}
-      variant={"floating"}
-    >
+    <Sidebar collapsible={"icon"} side={"left"} variant={"floating"}>
       <SidebarContent className="bg-primary text-primary-foreground rounded-lg border-none">
         <SidebarGroup>
           <SidebarGroupLabel className="text-primary-foreground text-lg mt-2 mb-2">
@@ -62,7 +68,11 @@ export function AppSidebar() {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild className="bg-yellow-40 w-full">
+                  <SidebarMenuButton
+                    asChild
+                    isActive={pathName === item.url?true:false}
+                    className="w-full"
+                  >
                     <Link href={item.url}>
                       <div className="text-md me-1">
                         <item.icon />
