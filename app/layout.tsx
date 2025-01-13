@@ -6,12 +6,12 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import React from "react";
 import StoreProvider from "./store/StoreProvider";
 import { Navbar } from "./Components/NavBar";
-import { Roboto } from "next/font/google";
+import { Jura  } from "next/font/google";
 
-const roboto = Roboto({
+const roboto = Jura({
   subsets: ["latin"],
-  weight: ["100", "400", "700", "900"], // Ensure these are valid weights
-  style: ["normal", "italic"],
+  // weight: ["100", "400", "700", "900"], // Ensure these are valid weights
+  style: ["normal"],
 });
 
 export const metadata: Metadata = {

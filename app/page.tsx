@@ -18,7 +18,7 @@ export default function Home() {
           </AvatarFallback>
         </Avatar>
         <div>
-          <h2 className="text-4xl xs:text-5xl font-bold  text-center lg:text-start uppercase">
+          <h2 className="text-4xl xs:text-5xl font-bold  text-center lg:text-start capitalize">
             Ahmad Raza
           </h2>
           <p
