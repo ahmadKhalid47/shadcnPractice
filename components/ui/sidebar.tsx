@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/tooltip";
 import { useDispatch } from "react-redux";
 import { setsidebarOpenR } from "@/app/store/Global";
+import { usePathname } from "next/navigation";
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -42,6 +43,8 @@ const SidebarContext = React.createContext<SidebarContext | null>(null);
 
 function useSidebar() {
   const context = React.useContext(SidebarContext);
+  console.log(context?.openMobile);
+
   const dispatch = useDispatch();
   React.useEffect(() => {
     dispatch(setsidebarOpenR(context?.state === "expanded" ? true : false));
@@ -95,6 +98,15 @@ const SidebarProvider = React.forwardRef<
       },
       [setOpenProp, open]
     );
+
+
+    // sidebar disappear on link change 
+
+    const pathName = usePathname();
+    React.useEffect(() => {
+      console.log(pathName);
+      setOpenMobile(false);
+    }, [pathName]);
 
     // Helper to toggle the sidebar.
     const toggleSidebar = React.useCallback(() => {
