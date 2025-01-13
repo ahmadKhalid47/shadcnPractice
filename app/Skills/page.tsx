@@ -88,7 +88,7 @@ const skillsObj = [
 export default function Skills() {
   return (
     <div className="w-full">
-      <h1 className="w-fit mx-auto text-4xl text-gray-400 mt-3 lg:mt-10 tracking-widest uppercase">
+      <h1 className="main-heading">
         SKILLS
       </h1>
       <div className="w-full flex lg:flex-row flex-col justify-center lg:justify-start items-center mt-12 lg:mt-24 gap-5">

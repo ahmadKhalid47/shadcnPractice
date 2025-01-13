@@ -3,7 +3,14 @@
 @tailwind utilities;
 
 body::-webkit-scrollbar {
-    display: none; 
+  display: none;
+}
+body {
+  background-image: url("/grains.svg");
+  background-size: 150px;
+}
+.main-heading {
+  @apply w-fit mx-auto text-4xl text-gray-400 mt-3 lg:mt-10 tracking-widest uppercase;
 }
 @layer base {
   :root {

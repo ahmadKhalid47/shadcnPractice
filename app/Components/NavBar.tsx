@@ -6,6 +6,7 @@ export function Navbar() {
   return (
     <div className="w-full h-fit sticky top-2 flex justify-between items-center">
       <SidebarTrigger />
+
       <div className="flex justify-start items-center gap-3">
         <a
           href="https://drive.google.com/file/d/1yMEWbeH8t8gUJfA2SD9V0CaRXLVAjfzg/view?usp=drive_link"

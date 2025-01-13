@@ -4,7 +4,7 @@ import profilePic from "../public/IMG-20241208-WA0041.jpg";
 export default function Home() {
   return (
     <div className="w-full">
-      <h1 className="w-fit mx-auto text-4xl text-gray-400 mt-3 lg:mt-10 tracking-widest uppercase" >
+      <h1 className="main-heading" >
         ABOUT
       </h1>
       <div className="mx-auto w-fit flex lg:flex-row flex-col justify-center g:justify-start items-center mt-12 lg:mt-24 gap-5">

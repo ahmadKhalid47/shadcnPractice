@@ -3,7 +3,7 @@
 export default function Experience() {
   return (
     <div className="w-full">
-      <h1 className="w-fit mx-auto text-4xl text-gray-400 mt-3 lg:mt-10 tracking-widest uppercase">
+      <h1 className="main-heading">
         experience
       </h1>
       <div className="w-full mt-12 lg:mt-24 bg-red-60 h-fit flex flex-col justify-start items-center">
