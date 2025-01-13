@@ -5,6 +5,11 @@
 body::-webkit-scrollbar {
     display: none; 
 }
+body{
+  background-image: url("/grain.jpg") !important;
+  background-size: 1px;
+background-repeat: repeat;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;

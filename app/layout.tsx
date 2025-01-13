@@ -29,7 +29,7 @@ export default function RootLayout({
       <SpeedInsights />
       <html lang="en">
         <body
-          className={`${roboto.className}  antialiased w-full bg-gray-300 text-secondary-foreground`}
+          className={`${roboto.className}  antialiased w-full bg-gray-30 text-secondary-foreground`}
         >
           <SidebarProvider className="relative">
             <AppSidebar />
